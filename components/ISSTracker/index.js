@@ -13,6 +13,7 @@ const fetcher = async (url) => {
     throw new Error("Failed to fetch ISS coordinates");
   }
   const data = await response.json();
+  console.log(data);
   return { longitude: data.longitude, latitude: data.latitude };
 };
 
